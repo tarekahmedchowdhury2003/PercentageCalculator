@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editTextBillAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Bill Amount"
+        android:layout_marginTop="100dp"
+        android:inputType="numberDecimal"
+        android:layout_marginBottom="16dp" />
+
+    <SeekBar
+        android:id="@+id/seekBarTipPercentage"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:max="30"
+        android:layout_below="@id/editTextBillAmount"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/textViewPercentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:text="Tip Percentage: 0%"
+        android:layout_below="@id/seekBarTipPercentage"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/buttonCalculateTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate Tip"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/textViewPercentage"
+        android:onClick="calculateTip" />
+
+    <TextView
+        android:id="@+id/textViewResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:textSize="24sp"
+        android:text="Tip: $0.00"
+        android:layout_below="@id/buttonCalculateTip"
+        android:layout_marginTop="16dp" />
+
+</RelativeLayout>
